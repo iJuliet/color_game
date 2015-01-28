@@ -1,0 +1,85 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function() {
+  var StartButton, yelpAPI;
+
+  yelpAPI = new (yelpAPI = (function() {
+    var api_host, cachebuster, default_location, oauth_consumer_key, oauth_nonce, oauth_signature_method, oauth_timestamp, oauth_token, secret_token;
+
+    function yelpAPI() {}
+
+    oauth_consumer_key = "WOk3A1nLkPV4Wua4GILhqg";
+
+    oauth_token = "8_YqeGwBH65cHUGSyeFNuGewIrst7K-g";
+
+    oauth_signature_method = "HMAC-SHA1";
+
+    secret_token = "e28a2aMlfVHDGwofVM8rzv6T8tU";
+
+    oauth_timestamp = new Date().getTime();
+
+    cachebuster = Math.floor(Math.random() * 10000000000000000);
+
+    oauth_nonce = cachebuster.toString();
+
+    default_location = "toronto";
+
+    api_host = "http://api.yelp.com/v2/search";
+
+    yelpAPI.prototype.startSearch = function(location, term) {
+      var data;
+      console.log("searching");
+      data = {
+        oauth_consumer_key: oauth_consumer_key,
+        oauth_nonce: oauth_nonce,
+        oauth_token: oauth_token,
+        oauth_signature_method: oauth_signature_method,
+        oauth_timestamp: oauth_timestamp,
+        oauth_signature: secret_token + "%3D",
+        term: term,
+        location: location
+      };
+      return $.ajax({
+        url: "http://api.yelp.com/v2/search",
+        data: data,
+        success: function(response) {
+          return console.log(response);
+        },
+        error: function(error) {
+          return console.log(error);
+        }
+      });
+    };
+
+    return yelpAPI;
+
+  })());
+
+  ({
+    percentEncode: function(str) {
+      return encodeURIComponent(str).replace(/\!/g, "%21").replace(/\*/g, "%2A").replace(/\'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29");
+    }
+  });
+
+  StartButton = React.createClass({
+    displayName: "Start",
+    onClick: function() {
+      console.log("here");
+      return yelpAPI.startSearch();
+    },
+    render: function() {
+      return React.DOM.button({
+        "btn": "btn",
+        onClick: this.onClick
+      }, "start");
+    }
+  });
+
+  $(function() {
+    var btn;
+    btn = StartButton();
+    return React.renderComponent(btn, document.getElementById('content'));
+  });
+
+}).call(this);
+
+},{}]},{},[1]);

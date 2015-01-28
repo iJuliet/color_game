@@ -1,0 +1,119 @@
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 13px;
+  text-align: center;
+  background: rgba(250, 244, 205, 0.66);
+}
+
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+  font-size: 12px;
+  margin: 0 2px;
+  padding: 0px 5px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+  margin: 0 0 15px;
+  padding: 0;
+  color: white;
+}
+
+h1 {
+  border-bottom: 1px solid #ddd;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+h2 {
+  border-bottom: 1px solid #eee;
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+p, ul {
+  margin: 15px 0;
+}
+
+ul {
+  padding-left: 30px;
+}
+table {
+  border-spacing: 5px;
+  padding-left: 35.5%;
+  padding-top:3%;
+}
+
+.belize-hole-flat-button {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #2980b9;
+  border: 0;
+  border-bottom: 2px solid #2475ab;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #2475ab;
+  box-shadow: inset 0 -2px #2475ab;
+}
+.belize-hole-flat-button:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.square-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+.game-btn {
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+}
+.yellow-btn {
+  background-color: #ffd700;
+}
+.green-btn {
+  background-color: #c2ecb5;
+}
+.red-btn {
+  background-color: #ff6666;
+}
+.blue-btn {
+  background-color: #6897bb;
+}
+#color-box .table{
+  left: 50%;
+}
+

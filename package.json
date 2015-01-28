@@ -1,0 +1,30 @@
+{
+  "name": "my-name-is-random",
+  "version": "0.0.0",
+  "description": "Random lunch picker",
+  "main": "main.js",
+  "dependencies": {
+    "coffee-script": "~1.6.2",
+    "coffeeify": "~0.5.1",
+    "caching-coffeeify": "~0.2.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-coffee": "~0.10.1",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-uglify": "^0.5.1",
+    "URIjs": "~1.11.0"
+  },
+  "devDependencies": {
+    "grunt-browserify": "^2.1.4"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "random",
+    "lunch"
+  ],
+  "author": "Irene Jiang"
+}
